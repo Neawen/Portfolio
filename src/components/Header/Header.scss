@@ -1,0 +1,48 @@
+@use "../../assets/style/variables.scss" as variables;
+@use "../../assets/style/mixins/link.scss" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+
+    &__logo {
+        font-family: variables.$second-font;
+        position: relative;
+        
+        a {
+            @include link;
+        }
+
+        &__icon {
+            height: 2.5rem;
+            width: 2.5rem;
+            
+        }
+
+        &__name {
+            position: absolute;
+            font-size: 1rem;
+            top: 1.3rem;
+            left: 1.5rem;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: 3rem;
+        padding-top: 0.6rem;
+
+        a {
+            @include link;
+        }
+    }
+
+    &__burger {
+        border: none;
+        background-color: variables.$background;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+}

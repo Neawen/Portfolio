@@ -1,0 +1,73 @@
+@use "../../assets/style/variables.scss" as variables;
+
+.hero {
+  position: relative;
+  display: flex;
+  padding: 3rem 0;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+
+  &__bg {
+    padding: 0 8rem;
+    height: 35rem;
+    width: 100%;
+    object-fit: cover;
+    mask-image: radial-gradient(
+      circle,
+      rgba(209, 215, 218, 1) 40%,
+      rgba(209, 215, 218, 0) 70%
+    );
+
+    @media (max-width: 1080px) {
+      padding: 0 4rem;
+      height: 28rem;
+    }
+
+    @media (max-width: 768px) {
+      padding: 1rem 0;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 3.3rem;
+    left: 0;
+    font-size: 6rem;
+    font-family: variables.$title-font;
+
+    @media (max-width: 1080px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      top: 4rem;
+      font-size: 2rem;
+    }
+
+    &__work {
+      padding-left: 10rem;
+
+      @media (max-width: 768px) {
+        padding-left: 5rem;
+      }
+    }
+
+    &__work-type {
+      padding-left: 5rem;
+      @media (max-width: 768px) {
+        padding-left: 2rem;
+      }
+
+      & .border-bottom {
+        padding-bottom: 0.5rem;
+        border-bottom: 1rem solid black;
+
+        @media (max-width: 768px) {
+          border-bottom: 0.6rem solid black;
+        }
+      }
+    }
+  }
+}

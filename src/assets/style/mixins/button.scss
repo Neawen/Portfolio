@@ -1,0 +1,10 @@
+@use "../variables.scss";
+
+@mixin button {
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  background: variables.$color-touch;
+  color: white;
+}

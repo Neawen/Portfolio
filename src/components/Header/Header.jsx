@@ -1,13 +1,12 @@
 import "./Header.scss";
-import logo from "../../assets/images/logo.png";
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="header__logo">
+      <div className="logo">
         <a href="">
-          <img className="header__logo__icon" src={logo} />
-          <h2 className="header__logo__name">ANAIS</h2>
+          <i className="fa-brands fa-pagelines logo__icon"></i>
+          <h2 className="logo__name">ANAIS</h2>
         </a>
       </div>
       <nav className="header__nav">

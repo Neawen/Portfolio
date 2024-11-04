@@ -1,6 +1,6 @@
 import Landing from "./pages/Landing";
 import Header from "./components/Header/Header";
-import "./assets/style/reset.scss";
+import "./assets/style/main.scss";
 
 function App() {
 

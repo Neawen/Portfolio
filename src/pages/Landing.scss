@@ -1,0 +1,8 @@
+.main {
+    margin: 0 3rem 0 3rem;
+    flex: 1;
+
+    @media (max-width: 768px) {
+        margin: 0 1rem;
+    }
+}

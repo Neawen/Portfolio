@@ -1,4 +1,5 @@
 import background from "../../assets/images/background2.webp";
+import Slider from "../Slider/Slider";
 import "./Hero.scss";
 
 const Hero = () => {
@@ -17,6 +18,7 @@ const Hero = () => {
           <span className="border-bottom">Fro</span>nt-end
         </span>
       </h1>
+      <Slider/>
     </section>
   );
 };

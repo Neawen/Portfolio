@@ -1,0 +1,18 @@
+@mixin article {
+    display: flex;
+    gap: 5rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@mixin article-title {
+    width: 15%;
+    border-top: 2px solid rgb(0, 0, 0);
+
+    @media (max-width: 768px) {
+        width: 45%;
+    }
+}

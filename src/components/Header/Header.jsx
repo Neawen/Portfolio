@@ -15,7 +15,7 @@ const Header = () => {
         <a href="">Contact</a>
       </nav>
       <button className="header__burger">
-        <i className="fa-solid fa-burger"></i>
+        <i className="fa-solid fa-bars"></i>
       </button>
     </header>
   );

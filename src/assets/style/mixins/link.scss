@@ -3,4 +3,12 @@
 @mixin link {
   color: variables.$background;
   text-decoration: none;
+  opacity: 1;
+  transform: opacity 0.3s;
+
+  // for computer and accessibility
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }

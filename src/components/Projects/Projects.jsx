@@ -1,13 +1,26 @@
 import "./Projects.scss";
 import projectsData from "../../data/projects.json";
 import projectsImage from "../../data/projectsImages";
+import { useState } from "react";
 
 const Projects = () => {
+  const [projectInfos, setProjectInfos] = useState([]);
+
   // sort last projects before older
   const newestProjects = projectsData.sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
   const lastProjects = newestProjects.slice(0, 2);
+
+  function handleProjectInfos(projectId) {
+    setProjectInfos((prevActiveProjects) => 
+      // if projects table includes project clicked
+      prevActiveProjects.includes(projectId) ?
+      // return projects table without it
+    prevActiveProjects.filter((id) => id !== projectId)
+    // else add it to projects table
+    : [...prevActiveProjects, projectId])
+  }
 
   return (
     <section>
@@ -15,13 +28,17 @@ const Projects = () => {
         <h2 className="projects__title">Projets</h2>
         <div className="projects__content">
           {lastProjects.map((project) => (
-            <div key={project.id} className="projects__content__card">
+            <div
+              key={project.id}
+              className="projects__content__card"
+              onClick={() => handleProjectInfos(project.id)}
+            >
               <img
                 src={projectsImage[project.imageKey]}
                 alt={`web site for ${project.name}`}
                 className="image"
               />
-              <div className="infos">
+              <div className={`infos ${projectInfos.includes(project.id) && "active"}`}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <a
@@ -40,7 +57,9 @@ const Projects = () => {
             </div>
           ))}
 
-          <a href="" className="projects__content__more">Plus <i className="fa-solid fa-angles-right"></i></a>
+          <a href="" className="projects__content__more">
+            Plus <i className="fa-solid fa-angles-right"></i>
+          </a>
         </div>
       </div>
       <div className="border-section">

@@ -69,11 +69,6 @@
           color: variables.$color-touch;
           font-weight: 700;
           padding: 0 1rem;
-          transition: color 0.2s ease-in-out;
-
-          &:hover {
-            color: color-mix(in srgb, white, variables.$color-touch 50%);
-          }
         }
 
         &__text {

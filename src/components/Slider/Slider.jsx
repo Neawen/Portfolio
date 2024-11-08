@@ -38,11 +38,10 @@ const Slider = () => {
 
   function handleSlider() {
     setActiveSlide((prev) => (prev === 0 ? 1 : 0));
-    // setActiveSlide(1)
   }
 
   useEffect(() => {
-    const interval = setInterval(handleSlider, 5000);
+    const interval = setInterval(handleSlider, 4000);
 
     return () => clearInterval(interval);
   }, []);

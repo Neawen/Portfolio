@@ -24,6 +24,7 @@ section {
       padding: 1rem;
       height: 32rem;
       position: relative;
+      cursor: pointer;
 
       .image {
         border-radius: 0 2rem 0 2rem;
@@ -55,6 +56,14 @@ section {
         visibility: hidden;
         z-index: -1;
 
+        // active class when clicked
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          transform: scale(1);
+          z-index: 1;
+        }
+
         p {
           font-size: 1rem;
 
@@ -85,15 +94,6 @@ section {
             border-radius: 0.5rem;
           }
         }
-      }
-    }
-
-    &__card:hover {
-      .infos {
-        opacity: 1;
-        visibility: visible;
-        transform: scale(1);
-        z-index: 1;
       }
     }
 

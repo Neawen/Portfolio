@@ -1,0 +1,69 @@
+[
+    {
+        "id": 1,
+        "title": "Sophie Bluel",
+        "description": "Dans ce projet, j'ai développé une interface web interactive pour une architecte d'intérieur, intégrant une présentation de ses réalisations, une page de connexion pour la gestion des contenus, et une modale d'upload de médias. Ce travail m'a permis de mettre en pratique mes compétences en JavaScript pour manipuler le DOM et gérer les interactions utilisateurs. En communiquant avec une API, j'ai également assuré la persistance des données. Les maquettes ont été fournies via Figma, et le projet a été géré dans Visual Studio Code et versionné avec GitHub, tout en suivant un Kanban pour l'organisation des tâches. Ce projet m'a offert une expérience complète de développement front-end dynamique avec une approche from scratch.",
+        "skills": [
+            "JavaScript",
+            "API",
+            "HTML",
+            "CSS",
+            "Figma"
+        ],
+        "repoLink": "https://github.com/Neawen/Sophie-Bluel---Architecte-d-int-rieur",
+        "link": null,
+        "category": "OpenClassrooms",
+        "date": "2024-06-01",
+        "imageKey": "sophieBluel"
+    },
+    {
+        "id": 2,
+        "title": "KASA",
+        "description": "Dans le cadre de la refonte complète du site Kasa, j'ai développé le front-end en React en suivant les maquettes Figma responsives. Le projet comprenait la création de composants interactifs, tels qu'une galerie de photos avec navigation circulaire et un système de collapse pour la gestion des informations supplémentaires. Le projet a été réalisé sans back-end actif, en utilisant un fichier JSON pour simuler les annonces de logements. Les styles ont été appliqués via SASS pour garantir un design responsive et uniforme.",
+        "skills": [
+            "React",
+            "React Router",
+            "SASS",
+            "Figma",
+            "JSON"
+        ],
+        "repoLink": "https://github.com/Neawen/Sophie-Bluel---Architecte-d-int-rieur",
+        "link": null,
+        "category": "OpenClassrooms",
+        "date": "2024-07-01",
+        "imageKey": "kasa"
+    },
+    {
+        "id": 3,
+        "title": "ArgentBank",
+        "description": "Dans ce projet, j'ai travaillé sur le front-end d'une application bancaire dynamique, développée en React pour l'interface utilisateur et Redux pour la gestion de l'état. L'application permet aux utilisateurs d'accéder à un tableau de bord bancaire sécurisé et responsive, avec des fonctionnalités de connexion et déconnexion, en utilisant un document API existant pour la connexion. En vue de futures fonctionnalités de gestion des transactions, j'ai documenté les routes API nécessaires, suivant les directives de Swagger. Cette documentation couvre les endpoints de visualisation, de modification, et de suppression d'informations sur les transactions. J’ai également intégré des pratiques de Green Code pour optimiser les images et les composants, améliorant ainsi la performance et la durabilité de l'application.",
+        "skills": [
+            "React",
+            "React Router",
+            "Redux",
+            "API REST"
+        ],
+        "repoLink": "https://github.com/Neawen/ArgentBank",
+        "link": null,
+        "category": "OpenClassrooms",
+        "date": "2024-09-01",
+        "imageKey": "argentBank"
+    },
+    {
+        "id": 4,
+        "title": "Portfolio",
+        "description": "Pour mon portfolio de développeuse, j'ai conçu un site dynamique avec React et SASS. Ce site illustre mes compétences et projets dans un design personnalisé, moderne et optimisé. La page d’accueil comprend une section Hero avec une image, un titre principal, ainsi que des liens vers mon profil GitHub et un bouton pour télécharger mon CV. J'ai également intégré l'API GitHub pour afficher en temps réel mes derniers dépôts, permettant aux recruteurs de voir mes activités de développement. Le design du portfolio est soigné et comprend des effets parallax et un layout Grid Masonry pour une disposition visuelle attrayante de mes projets. J'ai ajouté un mode nuit pour une meilleure expérience utilisateur, et une version en anglais pour élargir l’audience. Enfin, le site est déployé sur Vercel et optimisé pour le SEO, garantissant une bonne visibilité en ligne et une conformité avec les meilleures pratiques d’accessibilité. Ce projet m’a permis de consolider mes compétences en développement front-end tout en explorant des techniques avancées pour offrir une interface soignée et professionnelle.",
+        "skills": [
+            "React",
+            "SASS",
+            "API GitHub",
+            "Vercel",
+            "SEO"
+        ],
+        "repoLink": "https://github.com/Neawen/Portfolio",
+        "link": null,
+        "category": "OpenClassrooms",
+        "date": "2024-11-01",
+        "imageKey": "portfolio"
+    }
+]

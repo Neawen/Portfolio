@@ -74,7 +74,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="slider">
+    <aside className="slider">
       {slides.map((slide, index) => (
         <div
           className={`slider__container ${
@@ -95,7 +95,7 @@ const Slider = () => {
           ></span>
         ))}
       </div>
-    </div>
+    </aside>
   );
 };
 

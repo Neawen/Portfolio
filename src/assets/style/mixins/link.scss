@@ -1,4 +1,6 @@
+@use "../variables.scss" as variables;
+
 @mixin link {
-  color: black;
+  color: variables.$background;
   text-decoration: none;
 }

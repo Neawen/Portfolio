@@ -1,0 +1,32 @@
+@use "../variables.scss" as *;
+
+@mixin content {
+  display: flex;
+  gap: 5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@mixin content-title {
+  width: 20%;
+  border-left: 2px solid $color-touch;
+  padding-left: 0.5rem;
+
+  @media (max-width: 768px) {
+    width: 60%;
+  }
+}
+
+@mixin content-text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

@@ -6,6 +6,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: black;
 
     @media (max-width: 768px) {
         padding: 2rem 1rem;
@@ -27,8 +31,9 @@
 
     &__burger {
         border: none;
-        background-color: variables.$background;
-        font-size: 1.3rem;
+        color: variables.$background;
+        background-color: black;
+        font-size: 1.4rem;
         cursor: pointer;
     }
 }

@@ -8,6 +8,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-## Licences
+## Licenses
 
-Certaines icônes utilisées dans ce projet proviennent de [SVGRepo](https://www.svgrepo.com/) et sont sous licence MIT.
+Some icons used in this project are from [SVGRepo](https://www.svgrepo.com/) and are licensed under MIT.

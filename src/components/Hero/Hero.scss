@@ -3,7 +3,7 @@
 .hero {
   position: relative;
   display: flex;
-  padding: 3rem 0;
+  padding: 0 0 3rem 0;
 
   @media (max-width: 768px) {
     justify-content: center;

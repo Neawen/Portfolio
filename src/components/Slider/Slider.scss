@@ -1,9 +1,11 @@
 @use "../../assets/style/mixins/link.scss" as *;
 @use "../../assets/style/mixins/button.scss" as *;
+@use "../../assets/style/variables.scss" as variables;
 
 .slider {
     position: absolute;
     right: 0;
+    top: 3.3rem;
     border-top: 0.3rem solid black;
     display: flex;
     flex-direction: column;
@@ -12,11 +14,12 @@
 
     @media (max-width: 768px) {
       right: auto;
+      top: auto;
       bottom: 0rem;
     }
 
     &__container {
-      background-color: white;
+      background-color: rgba(white, 0.4);
       height: 20rem;
       width: 10rem;
       margin-bottom: 0.6rem;
@@ -34,6 +37,7 @@
       .fa-github {
         font-size: 3rem;
         @include link;
+        color: black;
       }
 
       &__border {
@@ -58,18 +62,23 @@
 
       .list {
         list-style: none;
-        margin-top: 2rem;
+        margin-top: 1rem;
 
         &__link {
           @include link;
-          @include button;
+          color: variables.$color-touch;
+          font-weight: 700;
           padding: 0 1rem;
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: color-mix(in srgb, white, variables.$color-touch 50%);
+          }
         }
 
         &__text {
-          margin-top: 0.5rem;
+          margin-top: 0.5rem; 
         }
-        
       }
     }
 

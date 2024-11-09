@@ -23,7 +23,7 @@ const Projects = () => {
   }
 
   return (
-    <section>
+    <section id="projects-section">
       <div className="projects">
         <h2 className="projects__title">Projets</h2>
         <div className="projects__content">
@@ -61,9 +61,6 @@ const Projects = () => {
             Plus <i className="fa-solid fa-angles-right"></i>
           </a>
         </div>
-      </div>
-      <div className="border-section">
-        <div className="border-section__lign"></div>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import "./Hero.scss";
 const Hero = () => {
 
   return (
-    <section className="hero">
+    <section className="hero" id="start">
       <img
         src={background}
         alt={`Image abstraite effet "dessiné au crayon" faisant référence à plusieurs langages de développement web`}

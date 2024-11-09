@@ -3,7 +3,7 @@ import skills from "../../data/skills";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about-section">
       <div className="about__presentation">
         <h2 className="about__presentation__title">À propos de moi</h2>
         <div className="about__presentation__content">
@@ -30,9 +30,6 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="border-section">
-        <div className="border-section__lign"></div>
       </div>
     </section>
   );

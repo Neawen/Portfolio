@@ -33,13 +33,3 @@ body {
     left: 1.1rem;
   }
 }
-
-.border-section {
-    display: flex;
-    justify-content: end;
-    
-  &__lign {
-    border: solid rgb(0, 0, 0) 0.3rem;
-    width: 30%;
-  }
-}

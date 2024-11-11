@@ -3,10 +3,12 @@ import "./Slider.scss";
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  // state variable to save repo from GitHub
   const [repos, setRepos] = useState([]);
 
   const slides = [
     {
+      // first view
       content: (
         <>
           <a href="https://github.com/Neawen" target="_blank">
@@ -18,6 +20,7 @@ const Slider = () => {
       ),
     },
     {
+      // second view
       content: (
         <>
           <h2 className="title">Dernier projet GitHub</h2>
@@ -27,7 +30,9 @@ const Slider = () => {
                 <a href={repo.html_url} target="_blank" className="list__link">
                   {repo.name}
                 </a>
-                <p className="list__text">Maj : {new Date(repo.updated_at).toLocaleDateString()}</p>
+                <p className="list__text">
+                  Maj : {new Date(repo.updated_at).toLocaleDateString()}
+                </p>
               </li>
             ))}
           </ul>
@@ -37,7 +42,7 @@ const Slider = () => {
   ];
 
   function handleSlider() {
-    setActiveSlide((prev) => (prev === 0 ? 1 : 0));
+    setActiveSlide((slide) => (slide === 0 ? 1 : 0));
   }
 
   useEffect(() => {
@@ -54,7 +59,7 @@ const Slider = () => {
         "https://api.github.com/users/Neawen/repos?sort=updated",
         {
           headers: {
-            Authorization: `${token}`,
+            Authorization: `Bearer ${token}`,
           },
         }
       );
@@ -76,11 +81,13 @@ const Slider = () => {
     <aside className="slider">
       {slides.map((slide, index) => (
         <div
-          className={`slider__container ${
-            activeSlide === 1 && "slider__container--second-view"
-          }`}
-          key={index}
-          style={{ display: activeSlide !== index && "none" }}
+          className={`slider__container
+            ${activeSlide === 1 && "slider__container--second-view"}
+            ${activeSlide === index && "slide-active"}
+           `}
+          //  first condition: class to reorganize slider second view
+          //  second condition: class to delete the view to hide
+          key={`slide-view-${index}`}
         >
           {slide.content}
         </div>
@@ -88,7 +95,7 @@ const Slider = () => {
       <div>
         {slides.map((dot, index) => (
           <span
-            key={index}
+            key={`dot-${index}`}
             onClick={() => setActiveSlide(index)}
             className={`dot ${activeSlide === index && "active"}`}
           ></span>

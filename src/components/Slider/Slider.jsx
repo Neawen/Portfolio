@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Slider.scss";
+import cv from "../../assets/pdf/cv.pdf";
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -15,7 +16,7 @@ const Slider = () => {
             <i className="fa-brands fa-github"></i>
           </a>
           <div className="slider__container__border"></div>
-          <button className="slider__container__cv">CV</button>
+          <a className="slider__container__cv" href={cv} target="_blank">CV</a>
         </>
       ),
     },

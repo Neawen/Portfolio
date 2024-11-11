@@ -1,0 +1,81 @@
+@use "../../assets/style/mixins/content-section.scss" as *;
+@use "../../assets/style/mixins/button.scss" as *;
+@use "../../assets/style/mixins/input.scss" as *;
+@use "../../assets/style/variables.scss" as variables;
+
+.form-section {
+  margin-bottom: 3rem;
+  @include content;
+
+  &__title {
+    @include content-title;
+  }
+
+  &__container {
+    @include content-text;
+
+    .text {
+      display: flex;
+      align-items: end;
+      gap: 1rem;
+      margin: 0.5rem 0;
+
+      @media (max-width: 768px) {
+        margin: 0.5rem;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      &__container-name {
+        display: flex;
+        gap: 1rem;
+
+        @media (max-width: 1024px) {
+          flex-direction: column;
+        }
+
+        label {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          gap: 0.5rem;
+
+          input {
+            @include input;
+          }
+        }
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+
+        input {
+          @include input;
+        }
+
+        textarea {
+          @include input;
+          height: 10rem;
+        }
+      }
+
+      .container-button {
+        display: flex;
+        justify-content: center;
+
+        button {
+          @include button;
+          padding: 0.1rem 1rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

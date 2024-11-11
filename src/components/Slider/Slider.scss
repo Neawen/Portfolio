@@ -55,6 +55,7 @@
     }
 
     &__cv {
+      @include link;
       @include button;
       padding: 0 2rem;
     }

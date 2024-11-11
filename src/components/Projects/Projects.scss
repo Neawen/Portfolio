@@ -3,13 +3,9 @@
 @use "../../assets/style/mixins/link.scss" as *;
 @use "../../assets/style/variables.scss" as variables;
 
-section {
-  margin-bottom: 3rem;
-}
-
 .projects {
   @include content;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   &__title {
     @include content-title;

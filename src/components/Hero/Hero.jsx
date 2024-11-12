@@ -1,13 +1,12 @@
-import background from "../../assets/images/background2.webp";
+// import background from "../../../public/background2.webp";
 import Slider from "../Slider/Slider";
 import "./Hero.scss";
 
 const Hero = () => {
-
   return (
     <section className="hero" id="start">
       <img
-        src={background}
+        src="/background2.webp"
         alt={`Image abstraite effet "dessiné au crayon" faisant référence à plusieurs langages de développement web`}
         className="hero__bg"
       />

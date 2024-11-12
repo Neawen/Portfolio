@@ -34,6 +34,7 @@ const Projects = () => {
               onClick={() => handleProjectInfos(project.id)}
             >
               <img
+                loading="lazy"
                 src={projectsImage[project.imageKey]}
                 alt={`web site for ${project.name}`}
                 className="image"

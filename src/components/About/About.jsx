@@ -23,7 +23,7 @@ const About = () => {
             <div className="about__skills__container">
               {skills.map((skill) => (
                 <div className="technology" key={skill.name}>
-                  <img src={skill.icon} alt={`${skill.name} icon`} />
+                  <img loading="lazy" src={skill.icon} alt={`${skill.name} icon`} />
                   <p>{skill.name}</p>
                 </div>
               ))}

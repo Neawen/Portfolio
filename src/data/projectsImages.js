@@ -1,7 +1,7 @@
-import sophieBluelImage from "../assets/images/sophie-Bluel.png";
-import kasaImage from "../assets/images/kasa.png";
-import argentBankImage from "../assets/images/argentBank.png";
-import portfolioImage from "../assets/images/portfolio.png";
+import sophieBluelImage from "../assets/images/sophie-Bluel.webp";
+import kasaImage from "../assets/images/kasa.webp";
+import argentBankImage from "../assets/images/argentBank.webp";
+import portfolioImage from "../assets/images/portfolio.webp";
 
 const projectsImage = {
     sophieBluel: sophieBluelImage,

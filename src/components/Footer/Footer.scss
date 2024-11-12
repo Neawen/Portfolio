@@ -1,0 +1,30 @@
+@use "../../assets/style/mixins/link.scss" as *;
+
+.footer {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 10px black;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &__social {
+    font-size: 2rem;
+    @include link;
+    color: black;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}

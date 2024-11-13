@@ -1,0 +1,37 @@
+name: Build and Deploy
+
+on: 
+  push:
+    branches:
+      - master # Pipeline executing on master branch when commited
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # GitHub Actions environment
+
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2 # step to get source code
+
+      - name: Set up Node.js 
+        uses: actions/setup-node@v2 
+        with: 
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install 
+
+      - name: Run lint
+        run: npm run lint #check code quality
+
+      - name: Run npm audit
+        run: npm audit --audit-level=high #checking vulnerabilities
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to server
+        run: npm run preview
+        env:
+          VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }} # to use secret token in environment

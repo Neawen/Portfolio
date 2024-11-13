@@ -1,0 +1,10 @@
+# automatic dependencies updates
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" #directory containing package.json
+    schedule: 
+      interval: "weekly"
+    commit-message:
+      prefix: "fix" #prefix for commit message for automatic updates

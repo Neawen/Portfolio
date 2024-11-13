@@ -22,7 +22,7 @@ const Header = () => {
           <a href="#projects-section">Projets</a>
           <a href="#">Contact</a>
         </nav>
-        <button className="header__burger" onClick={toggleSidebar}>
+        <button className="header__burger" onClick={toggleSidebar} aria-label="Ouvrir le menu d'options">
           {activeSidebar ? (
             // back
             <i className="fa-solid fa-arrow-right"></i>

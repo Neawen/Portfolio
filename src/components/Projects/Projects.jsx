@@ -36,7 +36,7 @@ const Projects = () => {
               <img
                 loading="lazy"
                 src={projectsImage[project.imageKey]}
-                alt={`web site for ${project.name}`}
+                alt={project.title === "Portfolio" ? `${project.title} web site` : `Web site for ${project.title}`}
                 className="image"
               />
               <div className={`infos ${projectInfos.includes(project.id) && "active"}`}>

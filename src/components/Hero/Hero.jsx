@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="hero" id="start">
       <img
         src="/background2.webp"
-        alt={`Image abstraite effet "dessiné au crayon" faisant référence à plusieurs langages de développement web`}
+        alt={`Image abstraite faisant référence à des langages de développement web`}
         className="hero__bg"
       />
       <h1 className="hero__title">

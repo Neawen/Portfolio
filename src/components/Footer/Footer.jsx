@@ -8,6 +8,7 @@ const Footer = () => {
         href="http://www.linkedin.com/in/anais-lenoble"
         target="_blank"
         className="footer__social"
+        aria-label="Lien vers Linkedin"
       >
         <i className="fa-brands fa-linkedin"></i>
       </a>

@@ -1,6 +1,6 @@
 import sophieBluelImage from "../assets/images/sophie-bluel.webp";
 import kasaImage from "../assets/images/kasa.webp";
-import argentBankImage from "../assets/images/argentBank.webp";
+import argentBankImage from "../assets/images/argentbank.webp";
 import portfolioImage from "../assets/images/portfolio.webp";
 
 const projectsImage = {

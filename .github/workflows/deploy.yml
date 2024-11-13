@@ -31,7 +31,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to server
-        run: npm run preview
-        env:
-          VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }} # to use secret token in environment
+      #- name: Deploy to server
+      # run: npm run preview
+      #  env:
+      #   VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }} # to use secret token in environment

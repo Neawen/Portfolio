@@ -1,4 +1,4 @@
-import sophieBluelImage from "../assets/images/sophie-Bluel.webp";
+import sophieBluelImage from "../assets/images/sophie-bluel.webp";
 import kasaImage from "../assets/images/kasa.webp";
 import argentBankImage from "../assets/images/argentBank.webp";
 import portfolioImage from "../assets/images/portfolio.webp";

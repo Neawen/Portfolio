@@ -5,7 +5,7 @@ import "./Hero.scss";
 const Hero = () => {
   return (
     <section className="hero" id="start">
-      <Parallax scale={[0.8, 1.2]} speed={0.6}>
+      <Parallax scale={[0.9, 1.4]} speed={0.6}>
         <img
           src="/background2.webp"
           alt={`Image abstraite faisant référence à des langages de développement web`}

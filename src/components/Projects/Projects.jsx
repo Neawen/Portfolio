@@ -13,13 +13,14 @@ const Projects = () => {
   const lastProjects = newestProjects.slice(0, 2);
 
   function handleProjectInfos(projectId) {
-    setProjectInfos((prevActiveProjects) => 
+    setProjectInfos((prevActiveProjects) =>
       // if projects table includes project clicked
-      prevActiveProjects.includes(projectId) ?
-      // return projects table without it
-    prevActiveProjects.filter((id) => id !== projectId)
-    // else add it to projects table
-    : [...prevActiveProjects, projectId])
+      prevActiveProjects.includes(projectId)
+        ? // return projects table without it
+          prevActiveProjects.filter((id) => id !== projectId)
+        : // else add it to projects table
+          [...prevActiveProjects, projectId]
+    );
   }
 
   return (
@@ -33,13 +34,21 @@ const Projects = () => {
               className="projects__content__card"
               onClick={() => handleProjectInfos(project.id)}
             >
-              <img
-                loading="lazy"
-                src={projectsImage[project.imageKey]}
-                alt={project.title === "Portfolio" ? `${project.title} web site` : `Web site for ${project.title}`}
-                className="image"
-              />
-              <div className={`infos ${projectInfos.includes(project.id) && "active"}`}>
+                <img
+                  loading="lazy"
+                  src={projectsImage[project.imageKey]}
+                  alt={
+                    project.title === "Portfolio"
+                      ? `${project.title} web site`
+                      : `Web site for ${project.title}`
+                  }
+                  className="image"
+                />
+              <div
+                className={`infos ${
+                  projectInfos.includes(project.id) && "active"
+                }`}
+              >
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <a
@@ -58,8 +67,14 @@ const Projects = () => {
             </div>
           ))}
 
-          <a href="" className="projects__content__more">
-            Plus <i className="fa-solid fa-angles-right"></i>
+          <a
+            href=""
+            className="projects__content__more"
+            aria-disabled
+            title="En construction"
+          >
+            Plus <i className="fa-solid fa-angles-right"></i> [{" "}
+            <i className="fa-solid fa-person-digging"></i> ]
           </a>
         </div>
       </div>

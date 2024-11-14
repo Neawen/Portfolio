@@ -11,18 +11,22 @@ const Header = () => {
   return (
     <header>
       <div className="header">
-        <div className="logo">
-          <a href="#start">
-            <i className="fa-brands fa-pagelines logo__icon"></i>
-            <h2 className="logo__name">ANAIS</h2>
-          </a>
-        </div>
+          <div className="logo">
+            <a href="#start">
+              <i className="fa-brands fa-pagelines logo__icon"></i>
+              <h2 className="logo__name">ANAIS</h2>
+            </a>
+          </div>
         <nav className="header__nav">
           <a href="#about-section">À propos</a>
           <a href="#projects-section">Projets</a>
           <a href="#">Contact</a>
         </nav>
-        <button className="header__burger" onClick={toggleSidebar} aria-label="Ouvrir le menu d'options">
+        <button
+          className="header__burger"
+          onClick={toggleSidebar}
+          aria-label="Ouvrir le menu d'options"
+        >
           {activeSidebar ? (
             // back
             <i className="fa-solid fa-arrow-right"></i>
@@ -39,8 +43,12 @@ const Header = () => {
           <a href="#">Contact</a>
         </nav>
         <div className="sidebar__config">
-          <p>Langage</p>
-          <p>Mode sombre</p>
+          <p title="En construction">
+            Langage [ <i className="fa-solid fa-person-digging"></i> ]
+          </p>
+          <p title="En construction">
+            Mode sombre [ <i className="fa-solid fa-person-digging"></i> ]
+          </p>
         </div>
       </div>
     </header>

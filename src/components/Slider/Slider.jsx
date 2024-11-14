@@ -12,11 +12,17 @@ const Slider = () => {
       // first view
       content: (
         <>
-          <a href="https://github.com/Neawen" target="_blank" aria-label="Lien vers GitHub">
+          <a
+            href="https://github.com/Neawen"
+            target="_blank"
+            aria-label="Lien vers GitHub"
+          >
             <i className="fa-brands fa-github"></i>
           </a>
           <div className="slider__container__border"></div>
-          <a className="slider__container__cv" href={cv} target="_blank">CV</a>
+          <a className="slider__container__cv" href={cv} target="_blank">
+            CV <i className="fa-regular fa-file-pdf"></i>
+          </a>
         </>
       ),
     },

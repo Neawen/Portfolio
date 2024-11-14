@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   padding: 0 0 3rem 0;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     justify-content: center;

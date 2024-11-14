@@ -1,15 +1,17 @@
-// import background from "../../../public/background2.webp";
+import { Parallax } from "react-scroll-parallax";
 import Slider from "../Slider/Slider";
 import "./Hero.scss";
 
 const Hero = () => {
   return (
     <section className="hero" id="start">
-      <img
-        src="/background2.webp"
-        alt={`Image abstraite faisant référence à des langages de développement web`}
-        className="hero__bg"
-      />
+      <Parallax scale={[0.8, 1.2]} speed={0.6}>
+        <img
+          src="/background2.webp"
+          alt={`Image abstraite faisant référence à des langages de développement web`}
+          className="hero__bg"
+        />
+      </Parallax>
       <h1 className="hero__title">
         <span className="hero__title__name">Anaïs Lenoble</span> <br />
         <span className="hero__title__work">Développeuse</span> <br />
@@ -17,7 +19,7 @@ const Hero = () => {
           <span className="border-bottom">Fro</span>nt-end
         </span>
       </h1>
-      <Slider/>
+      <Slider />
     </section>
   );
 };

@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Lint and Audit
 
 on: 
   push:
@@ -27,11 +27,3 @@ jobs:
 
       - name: Run npm audit
         run: npm audit --audit-level=high #checking vulnerabilities
-
-      - name: Build project
-        run: npm run build
-
-      #- name: Deploy to server
-      # run: npm run preview
-      #  env:
-      #   VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }} # to use secret token in environment

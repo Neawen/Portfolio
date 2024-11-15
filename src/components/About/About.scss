@@ -17,6 +17,11 @@
 
     &__content {
       @include content-text;
+
+      a {
+        color: black;
+        text-decoration: underline;
+      }
     }
   }
 

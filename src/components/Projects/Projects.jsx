@@ -10,7 +10,7 @@ const Projects = () => {
   const newestProjects = projectsData.sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
-  const lastProjects = newestProjects.slice(0, 2);
+  const lastProjects = newestProjects.slice(1, 3);
 
   function handleProjectInfos(projectId) {
     setProjectInfos((prevActiveProjects) =>
@@ -34,16 +34,16 @@ const Projects = () => {
               className="projects__content__card"
               onClick={() => handleProjectInfos(project.id)}
             >
-                <img
-                  loading="lazy"
-                  src={projectsImage[project.imageKey]}
-                  alt={
-                    project.title === "Portfolio"
-                      ? `${project.title} web site`
-                      : `Web site for ${project.title}`
-                  }
-                  className="image"
-                />
+              <img
+                loading="lazy"
+                src={projectsImage[project.imageKey]}
+                alt={
+                  project.title === "Portfolio"
+                    ? `${project.title} web site`
+                    : `Web site for ${project.title}`
+                }
+                className="image"
+              />
               <div
                 className={`infos ${
                   projectInfos.includes(project.id) && "active"
@@ -67,14 +67,8 @@ const Projects = () => {
             </div>
           ))}
 
-          <a
-            href=""
-            className="projects__content__more"
-            aria-disabled
-            title="En construction"
-          >
-            Plus <i className="fa-solid fa-angles-right"></i> [{" "}
-            <i className="fa-solid fa-person-digging"></i> ]
+          <a href="" className="projects__content__more" aria-disabled>
+            Plus <i className="fa-solid fa-angles-right"></i>
           </a>
         </div>
       </div>

@@ -4,7 +4,7 @@
   color: variables.$background;
   text-decoration: none;
   opacity: 1;
-  transform: opacity 0.3s;
+  transition: opacity 0.2s;
 
   // for computer and accessibility
   &:hover,

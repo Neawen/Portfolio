@@ -20,7 +20,7 @@ const Header = () => {
         <nav className="header__nav">
           <a href="#about-section">À propos</a>
           <a href="#projects-section">Projets</a>
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </nav>
         <button
           className="header__burger"

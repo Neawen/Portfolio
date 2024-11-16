@@ -38,7 +38,7 @@ const Form = () => {
   }
 
   return (
-    <section className="form-section">
+    <section className="form-section" id="contact">
       <h2 className="form-section__title">Contactez-moi</h2>
       <div className="form-section__container">
         <div className="text">

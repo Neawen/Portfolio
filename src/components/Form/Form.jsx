@@ -22,10 +22,13 @@ const Form = () => {
 
     emailjs
       .sendForm(
-        "service_portfolio",
-        "template_18teulf",
+        // service ID
+        import.meta.env.VITE_EMAILJS_SERVICE,
+        // response template ID
+        import.meta.env.VITE_EMAILJS_TEMPLATE,
         e.target,
-        "-a2Rsqph9FcEDtEZO"
+        // API key
+        import.meta.env.VITE_EMAILJS_KEY
       )
       .then(() => {
         setFormStatus("Message envoyé avec succès !");

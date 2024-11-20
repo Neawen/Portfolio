@@ -1,12 +1,19 @@
 @use "../../assets/style/mixins/link.scss" as *;
 
-.footer {
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 5px 5px 10px black;
+  
+  .footer {
   padding: 2rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 5px 5px 10px black;
   gap: 1rem;
+  max-width: 1440px;
+  width: 100%;
 
   @media (max-width: 768px) {
     padding: 2rem 1rem;
@@ -27,4 +34,6 @@
       text-align: center;
     }
   }
+}
+
 }

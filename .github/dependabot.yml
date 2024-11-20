@@ -7,4 +7,4 @@ updates:
     schedule: 
       interval: "weekly"
     commit-message:
-      prefix: "fix" #prefix for commit message for automatic updates
+      prefix: "update" #prefix for commit message for automatic updates

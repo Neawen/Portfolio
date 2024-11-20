@@ -14,7 +14,7 @@ const Hero = () => {
       </Parallax>
       <h1 className="hero__title">
         <span className="hero__title__name">Anaïs Lenoble</span> <br />
-        <span className="hero__title__work">Développeuse</span> <br />
+        <span className="hero__title__work">Développeuse web</span> <br />
         <span className="hero__title__work-type">
           <span className="border-bottom">Fro</span>nt-end
         </span>

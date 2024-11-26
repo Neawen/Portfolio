@@ -52,6 +52,7 @@ const Form = () => {
       initial={{ opacity: 0}}
       animate={isInView && { opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.5}}
+      viewport={{ once: true }}
       >
         <div className="text">
           <p>Une idée de projet en tête ou pour toute autre information</p>

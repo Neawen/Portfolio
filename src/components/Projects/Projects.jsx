@@ -2,7 +2,7 @@ import "./Projects.scss";
 import projectsData from "../../data/projects.json";
 import projectsImage from "../../data/projectsImages";
 import { useRef, useState } from "react";
-import { domAnimation, LazyMotion, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const Projects = () => {
   const [projectInfos, setProjectInfos] = useState([]);
@@ -48,13 +48,14 @@ const Projects = () => {
     <section id="projects-section">
       <div className="projects">
         <h2 className="projects__title">Projets</h2>
-        <LazyMotion features={domAnimation}>
           <motion.div
             className="projects__content"
             variants={containerVariants}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInView && "visible"}
             ref={ref}
+            viewport={{ once: true }}
+
           >
             {lastProjects.map((project) => (
               <motion.div
@@ -100,7 +101,6 @@ const Projects = () => {
               Plus <i className="fa-solid fa-angles-right"></i>
             </a>
           </motion.div>
-        </LazyMotion>
       </div>
     </section>
   );

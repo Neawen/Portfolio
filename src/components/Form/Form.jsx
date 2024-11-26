@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./Form.scss";
 import emailjs from "emailjs-com";
+import { motion, useInView } from "framer-motion";
 
 const Form = () => {
   const [formStatus, setFormStatus] = useState("");
+  const ref = useRef(null);
+  // threshold > form needs to be visible at 50%
+  const isInView = useInView(ref, { threshold: 0.5 });
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -43,7 +47,12 @@ const Form = () => {
   return (
     <section className="form-section" id="contact">
       <h2 className="form-section__title">Contactez-moi</h2>
-      <div className="form-section__container">
+      <motion.div className="form-section__container" 
+      ref={ref}
+      initial={{ opacity: 0}}
+      animate={isInView && { opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.5}}
+      >
         <div className="text">
           <p>Une idée de projet en tête ou pour toute autre information</p>
           <i className="fa-solid fa-turn-down"></i>
@@ -72,7 +81,7 @@ const Form = () => {
           </div>
           <p className="status">{formStatus}</p>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };

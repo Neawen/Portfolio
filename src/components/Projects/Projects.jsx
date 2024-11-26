@@ -1,10 +1,13 @@
 import "./Projects.scss";
 import projectsData from "../../data/projects.json";
 import projectsImage from "../../data/projectsImages";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { domAnimation, LazyMotion, motion, useInView } from "framer-motion";
 
 const Projects = () => {
   const [projectInfos, setProjectInfos] = useState([]);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { threshold: 0.5 });
 
   // sort last projects before older
   const newestProjects = projectsData.sort(
@@ -23,54 +26,81 @@ const Projects = () => {
     );
   }
 
+  // variant for children (project cards)
+  const cardVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  //  variant for parent container
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 1,
+      },
+    },
+  };
+
   return (
     <section id="projects-section">
       <div className="projects">
         <h2 className="projects__title">Projets</h2>
-        <div className="projects__content">
-          {lastProjects.map((project) => (
-            <div
-              key={project.id}
-              className="projects__content__card"
-              onClick={() => handleProjectInfos(project.id)}
-            >
-              <img
-                loading="lazy"
-                src={projectsImage[project.imageKey]}
-                alt={
-                  project.title === "Portfolio"
-                    ? `${project.title} web site`
-                    : `Web site for ${project.title}`
-                }
-                className="image"
-              />
-              <div
-                className={`infos ${
-                  projectInfos.includes(project.id) && "active"
-                }`}
+        <LazyMotion features={domAnimation}>
+          <motion.div
+            className="projects__content"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            ref={ref}
+          >
+            {lastProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                className="projects__content__card"
+                onClick={() => handleProjectInfos(project.id)}
+                variants={cardVariants}
               >
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <a
-                  href={project.link ? project.link : project.repoLink}
-                  target="_blank"
-                  className="infos__link"
+                <img
+                  loading="lazy"
+                  src={projectsImage[project.imageKey]}
+                  alt={
+                    project.title === "Portfolio"
+                      ? `${project.title} web site`
+                      : `Web site for ${project.title}`
+                  }
+                  className="image"
+                />
+                <div
+                  className={`infos ${
+                    projectInfos.includes(project.id) && "active"
+                  }`}
                 >
-                  Voir le Projet
-                </a>
-                <ul className="infos__skills">
-                  {project.skills.map((technology, index) => (
-                    <li key={`tech-${index}`}>{technology}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <a
+                    href={project.link ? project.link : project.repoLink}
+                    target="_blank"
+                    className="infos__link"
+                  >
+                    Voir le Projet
+                  </a>
+                  <ul className="infos__skills">
+                    {project.skills.map((technology, index) => (
+                      <li key={`tech-${index}`}>{technology}</li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
 
-          <a href="" className="projects__content__more" aria-disabled>
-            Plus <i className="fa-solid fa-angles-right"></i>
-          </a>
-        </div>
+            <a href="" className="projects__content__more">
+              Plus <i className="fa-solid fa-angles-right"></i>
+            </a>
+          </motion.div>
+        </LazyMotion>
       </div>
     </section>
   );

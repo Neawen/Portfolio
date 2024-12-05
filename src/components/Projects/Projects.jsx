@@ -1,12 +1,17 @@
 import "./Projects.scss";
-import projectsData from "../../data/projects.json";
-import projectsImage from "../../data/projectsImages";
+
+import { ProjectType, ProjectsTypeImage } from "../../PropTypes/types";
+
+import PropTypes from "prop-types";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { Link } from "react-router-dom";
 
-const Projects = () => {
+const Projects = ({projectsData, projectsImage}) => {
   const [projectInfos, setProjectInfos] = useState([]);
-  const ref = useRef(null);
+  // ref to interact with a dom element (pojects container)
+  const ref = useRef(null); 
+  // framer motion hook to check if ref is visible at 50%
   const isInView = useInView(ref, { threshold: 0.5 });
 
   // sort last projects before older
@@ -26,20 +31,21 @@ const Projects = () => {
     );
   }
 
-  // variant for children (project cards)
+  // animation variants for project cards 
   const cardVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
-  //  variant for parent container
+  // animation variants for parent container
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         delay: 0.5,
-        staggerChildren: 1,
+        // delay between children
+        staggerChildren: 1, 
       },
     },
   };
@@ -97,13 +103,18 @@ const Projects = () => {
               </motion.div>
             ))}
 
-            <a href="" className="projects__content__more">
+            <Link to="/all-projects" href="" className="projects__content__more">
               Plus <i className="fa-solid fa-angles-right"></i>
-            </a>
+            </Link>
           </motion.div>
       </div>
     </section>
   );
 };
+
+Projects.propTypes = {
+  projectsData: PropTypes.arrayOf(PropTypes.shape(ProjectType)).isRequired,
+  projectsImage: ProjectsTypeImage,
+}
 
 export default Projects;

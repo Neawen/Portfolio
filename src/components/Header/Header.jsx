@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./Header.scss";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [activeSidebar, setActiveSideBar] = useState(false);
+  const location = useLocation();
+  const projectsPage = location.pathname === "/all-projects";
 
   function toggleSidebar() {
     setActiveSideBar((prevState) => !prevState);
@@ -13,15 +16,21 @@ const Header = () => {
       <div className="header-container">
         <div className="header">
           <div className="logo">
-            <a href="#start">
+            <Link to="/">
               <i className="fa-brands fa-pagelines logo__icon"></i>
               <h2 className="logo__name">ANAIS</h2>
-            </a>
+            </Link>
           </div>
           <nav className="header__nav">
-            <a href="#about-section">À propos</a>
-            <a href="#projects-section">Projets</a>
-            <a href="#contact">Contact</a>
+            {!projectsPage ? (
+              <>
+                <a href="/#about-section">À propos</a>
+                <a href="/#projects-section">Projets</a>
+                <a href="/#contact">Contact</a>
+              </>
+            ) : (
+              <Link to="/">Accueil</Link>
+            )}
           </nav>
           <button
             className="header__burger"

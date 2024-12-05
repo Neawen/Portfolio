@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 
 const Form = () => {
   const [formStatus, setFormStatus] = useState("");
+  // ref to interact with a dom element (form)
   const ref = useRef(null);
   // threshold > form needs to be visible at 50%
   const isInView = useInView(ref, { threshold: 0.5 });

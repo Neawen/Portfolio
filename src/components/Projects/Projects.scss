@@ -27,7 +27,8 @@
       }
 
       @media (max-width: 768px) {
-        height: 17rem;
+        height: 16rem;
+        padding: 0.3rem;
       }
 
       .image {
@@ -43,7 +44,7 @@
         }
 
         @media (max-width: 768px) {
-          height: 15rem;
+          height: 15.3rem;
         }
       }
 
@@ -126,7 +127,6 @@
       align-items: center;
       gap: 0.3rem;
       font-size: 0.9rem;
-      display: none;
     }
   }
 }

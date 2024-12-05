@@ -92,6 +92,7 @@ header {
           align-items: end;
           padding-bottom: 1rem;
           border-bottom: rgba(grey, 0.5) solid 1px;
+          gap: 0.2rem;
 
           a {
             @include link;

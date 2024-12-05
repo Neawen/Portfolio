@@ -48,9 +48,15 @@ const Header = () => {
         </div>
         <div className={`sidebar ${activeSidebar && "sidebar--active"}`}>
           <nav className="sidebar__nav">
-            <a href="#about-section">À propos</a>
-            <a href="#projects-section">Projets</a>
-            <a href="#contact">Contact</a>
+          {!projectsPage ? (
+              <>
+                <a href="/#about-section">À propos</a>
+                <a href="/#projects-section">Projets</a>
+                <a href="/#contact">Contact</a>
+              </>
+            ) : (
+              <Link to="/">Accueil</Link>
+            )}
           </nav>
           <div className="sidebar__config">
             <p>Langage</p>

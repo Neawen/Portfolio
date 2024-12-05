@@ -59,6 +59,10 @@
         transition: transform 0.3s ease-in-out;
         width: 100%;
 
+        @media (max-width:1024px) {
+          flex-direction: column;
+        }
+
         &:hover {
           transform: scale(1.05);
         }
@@ -69,6 +73,12 @@
           object-fit: cover;
           object-position: top;
           border-radius: 1rem 0 0 1rem;
+
+          @media (max-width:1024px) {
+            width: 100%;
+            height: 70%;
+            border-radius: 0;
+          }
         }
 
         &__infos {
@@ -78,6 +88,14 @@
           padding: 2rem 1rem;
           text-align: center;
           width: 30%;
+
+          @media (max-width:1024px) {
+            width: 100%;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0;
+            height: 30%;
+          }
 
           ul {
             list-style: none;

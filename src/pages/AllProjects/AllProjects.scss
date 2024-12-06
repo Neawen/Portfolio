@@ -154,6 +154,12 @@
         width: 95%;
       }
 
+      p {
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+
       &__close {
         background-color: variable.$background;
         border: none;

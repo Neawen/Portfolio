@@ -86,11 +86,6 @@ const Projects = ({ projectsData, projectsImage }) => {
               >
                 <h3>{project.title}</h3>
                 <p>{project.shortDesc}</p>
-                <ul className="infos__skills">
-                  {project.skills.map((technology, index) => (
-                    <li key={`tech-${index}`}>{technology}</li>
-                  ))}
-                </ul>
                 <a
                   href={project.link ? project.link : project.repoLink}
                   target="_blank"
@@ -98,6 +93,11 @@ const Projects = ({ projectsData, projectsImage }) => {
                 >
                   Voir le Projet
                 </a>
+                <ul className="infos__skills">
+                  {project.skills.map((technology, index) => (
+                    <li key={`tech-${index}`}>{technology}</li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}

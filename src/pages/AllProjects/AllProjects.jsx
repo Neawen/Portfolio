@@ -65,7 +65,14 @@ const AllProjects = ({ projectsData, projectsImage }) => {
                 onClick={() => openModal(project)}
               >
                 <div className="container-projects__card">
-                  <img src={projectsImage[project.imageKey]} />
+                  <img
+                    src={projectsImage[project.imageKey]}
+                    alt={
+                      project.title === "Portfolio"
+                        ? `${project.title} web site`
+                        : `Web site for ${project.title}`
+                    }
+                  />
                   <div className="container-projects__card__infos">
                     <h2>{project.title}</h2>
                     <p>{project.shortDesc}</p>
@@ -92,7 +99,11 @@ const AllProjects = ({ projectsData, projectsImage }) => {
         {selectedProject && (
           <>
             <button className="modal__close">
-              <i className="fa-regular fa-circle-xmark" onClick={closeModal} aria-label="Fermer la modale"></i>
+              <i
+                className="fa-regular fa-circle-xmark"
+                onClick={closeModal}
+                aria-label="Fermer la modale"
+              ></i>
             </button>
             <h2>Détails du projet</h2>
             <p>{selectedProject.description}</p>

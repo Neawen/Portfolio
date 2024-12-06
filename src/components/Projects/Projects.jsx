@@ -86,13 +86,12 @@ const Projects = ({ projectsData, projectsImage }) => {
               >
                 <h3>{project.title}</h3>
                 <p>{project.shortDesc}</p>
-                <a
+                <Link
                   href={project.link ? project.link : project.repoLink}
-                  target="_blank"
                   className="infos__link"
                 >
                   Voir le Projet
-                </a>
+                </Link>
                 <ul className="infos__skills">
                   {project.skills.map((technology, index) => (
                     <li key={`tech-${index}`}>{technology}</li>

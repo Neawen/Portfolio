@@ -149,6 +149,11 @@
         top: 45%;
       }
 
+      @media (max-width: 768px) {
+        gap: 0.5rem;
+        width: 95%;
+      }
+
       &__close {
         background-color: variable.$background;
         border: none;

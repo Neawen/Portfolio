@@ -86,12 +86,13 @@ const Projects = ({ projectsData, projectsImage }) => {
               >
                 <h3>{project.title}</h3>
                 <p>{project.shortDesc}</p>
-                <Link
+                <a
                   href={project.link ? project.link : project.repoLink}
                   className="infos__link"
+                  target="_blank"
                 >
                   Voir le Projet
-                </Link>
+                </a>
                 <ul className="infos__skills">
                   {project.skills.map((technology, index) => (
                     <li key={`tech-${index}`}>{technology}</li>
@@ -102,7 +103,7 @@ const Projects = ({ projectsData, projectsImage }) => {
           ))}
 
           <div className="container-link">
-            <Link to="/all-projects" href="" className="container-link__more">
+            <Link to="/all-projects" className="container-link__more">
               Plus <i className="fa-solid fa-angles-right"></i>
             </Link>
           </div>

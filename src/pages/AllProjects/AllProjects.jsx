@@ -98,14 +98,16 @@ const AllProjects = ({ projectsData, projectsImage }) => {
       >
         {selectedProject && (
           <>
-            <button className="modal__close">
-              <i
-                className="fa-regular fa-circle-xmark"
-                onClick={closeModal}
-                aria-label="Fermer la modale"
-              ></i>
-            </button>
-            <h2>Détails du projet</h2>
+            <div className="modal__header">
+              <h2>Détails du projet</h2>
+              <button className="modal__header__close">
+                <i
+                  className="fa-regular fa-circle-xmark"
+                  onClick={closeModal}
+                  aria-label="Fermer la modale"
+                ></i>
+              </button>
+            </div>
             <p>{selectedProject.description}</p>
             <div className="modal__link">
               <a

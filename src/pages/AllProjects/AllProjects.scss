@@ -154,27 +154,31 @@
         width: 95%;
       }
 
+      &__header {
+        display: flex;
+        justify-content: space-between;
+
+        &__close {
+          background-color: variable.$background;
+          border: none;
+  
+          i {
+            font-size: 1.5rem;
+            cursor: pointer;
+          }
+        }
+      }
+
       p {
         @media (max-width: 768px) {
           font-size: 1rem;
         }
       }
 
-      &__close {
-        background-color: variable.$background;
-        border: none;
-        display: flex;
-        justify-content: end;
-
-        i {
-          font-size: 1.5rem;
-          cursor: pointer;
-        }
-      }
-
       &__link {
         display: flex;
         justify-content: center;
+        margin-top: 0.5rem;
 
         a {
           @include link;

@@ -1,5 +1,6 @@
 @use "../../assets/style/variables.scss" as variables;
 @use "../../assets/style/mixins/link.scss" as *;
+@use "../../assets/style/mixins/button.scss" as *;
 
 header {
   background-color: black;
@@ -42,9 +43,9 @@ header {
       }
 
       &__burger {
-        display: none;
+        display: flex;
         border: none;
-        color: variables.$background;
+        color: variables.$bg-light;
         background-color: black;
         font-size: 1.4rem;
         cursor: pointer;
@@ -68,7 +69,7 @@ header {
       align-items: end;
       padding: 1rem 3rem 1rem 0;
       gap: 1rem;
-      color: variables.$background;
+      color: variables.$bg-light;
       transform: translateX(100%);
       transition: transform 0.3s ease-in-out;
       z-index: -1;
@@ -101,8 +102,24 @@ header {
       }
 
       &__config {
-        display: none;
         text-align: end;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 0.5rem;
+
+        p {
+          display: none;
+        }
+
+        button {
+          background-color: black;
+          border: none;
+          color: variables.$bg-light;
+          font-size: 1.5rem;
+          padding: 0.2rem 1rem;
+          @include button;
+        }
       }
     }
   }

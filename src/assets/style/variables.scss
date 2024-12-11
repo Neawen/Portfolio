@@ -1,8 +1,13 @@
 
+@use 'sass:color';
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap');
+
+$bg-light: #d1d7da;
+$text-color-light: black;
+$bg-dark: black;
+$text-color-dark: $bg-light;
 
 $font: "Quicksand", sans-serif;
 $logo-font: "Shadows into light", sans-serif;
 $title-font: "Shadows into light", sans-serif;
-$background: #d1d7da;
 $color-touch: #AA2041;

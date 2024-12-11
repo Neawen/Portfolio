@@ -1,7 +1,7 @@
 @use "../variables.scss" as variables;
 
 @mixin link {
-  color: variables.$background;
+  color: variables.$text-color-dark;
   text-decoration: none;
   opacity: 1;
   transition: opacity 0.2s;
@@ -10,5 +10,11 @@
   &:hover,
   &:focus {
     opacity: 0.6;
+  }
+}
+
+[data-theme="dark"] {
+  a {
+    color: variables.$text-color-dark;
   }
 }

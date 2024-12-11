@@ -8,9 +8,17 @@
 }
 
 body {
+  background-color: variables.$bg-light;
+  color: variables.$text-color-light;
   font-family: variables.$font;
-  background-color: variables.$background;
   font-size: 1.1rem;
+}
+
+[data-theme="dark"] {
+  body {
+    background-color: variables.$bg-dark;
+    color: variables.$text-color-dark;
+  }
 }
 
 #root {

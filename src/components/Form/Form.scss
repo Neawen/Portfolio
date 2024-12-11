@@ -69,8 +69,16 @@
           @include button;
           padding: 0.1rem 1rem;
           margin-top: 1rem;
+          background-color: variables.$bg-light;
         }
       }
     }
+  }
+}
+
+[data-theme="dark"] {
+  .form-section__container .form .container-button button {
+    background-color: variables.$bg-dark;
+    color: variables.$text-color-dark;
   }
 }

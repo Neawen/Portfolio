@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.scss";
 import { Link, useLocation } from "react-router-dom";
 
@@ -7,9 +7,35 @@ const Header = () => {
   const location = useLocation();
   const projectsPage = location.pathname === "/all-projects";
 
+  const [theme, setTheme] = useState(() => {
+    const choosenTheme = localStorage.getItem("choosenTheme");
+    const systemPreferences = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    if (choosenTheme) {
+      return choosenTheme;
+    } else {
+      // if user prefers dark system use dark data-theme else light
+      return systemPreferences ? "dark" : "light";
+    }
+  });
+
   function toggleSidebar() {
     setActiveSideBar((prevState) => !prevState);
   }
+
+  function toggleTheme() {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("choosenTheme", newTheme);
+  }
+
+  useEffect(() => {
+    // add data-theme attribute to the page 
+    document.documentElement.setAttribute("data-theme", theme);
+    // update when theme changes
+  }, [theme]);
 
   return (
     <header>
@@ -48,7 +74,7 @@ const Header = () => {
         </div>
         <div className={`sidebar ${activeSidebar && "sidebar--active"}`}>
           <nav className="sidebar__nav">
-          {!projectsPage ? (
+            {!projectsPage ? (
               <>
                 <a href="/#about-section">À propos</a>
                 <a href="/#projects-section">Projets</a>
@@ -60,7 +86,18 @@ const Header = () => {
           </nav>
           <div className="sidebar__config">
             <p>Langage</p>
-            <p>Mode sombre</p>
+            <button
+              onClick={toggleTheme}
+              aria-label={`Activer le mode ${
+                theme === "light" ? "sombre" : "clair"
+              }`}
+            >
+              {theme === "light" ? (
+                <i className="fa-regular fa-moon"></i>
+              ) : (
+                <i className="fa-regular fa-sun"></i>
+              )}
+            </button>
           </div>
         </div>
       </div>

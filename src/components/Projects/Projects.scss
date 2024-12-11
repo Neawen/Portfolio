@@ -5,7 +5,9 @@
 
 .projects {
   @include content;
-  margin-bottom: 3rem;
+  & {
+    margin-bottom: 3rem;
+  }
 
   &__title {
     @include content-title;
@@ -13,7 +15,9 @@
 
   &__content {
     @include content-text;
-    align-items: center;
+    & {
+      align-items: center;
+    }
 
     &__card {
       background-color: rgba(white, 0.4);
@@ -43,7 +47,7 @@
         width: 100%;
         transition: transform 0.2s ease-in-out;
 
-        &:hover, 
+        &:hover,
         &:focus {
           transform: scale(0.95);
         }
@@ -99,8 +103,11 @@
         &__link {
           @include link;
           @include button;
-          padding: 0 1rem;
-          margin: 0.5rem 0;
+          & {
+            padding: 0 1rem;
+            margin: 0.5rem 0;
+            color: white;
+          }
         }
 
         &__skills {
@@ -115,9 +122,11 @@
 
           li {
             padding: 0.2rem;
-            border: variables.$color-touch solid 0.1rem;
+            color: variables.$color-touch;
             border-radius: 0.5rem;
             font-weight: 700;
+            text-shadow: 1px 1px 0px black, -1px -1px 0px black,
+              1px -1px 0px black, -1px 1px 0px black;
           }
         }
       }
@@ -130,13 +139,21 @@
 
       &__more {
         @include link;
-        color: black;
-        font-weight: 800;
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-        font-size: 0.9rem;
+        & {
+          color: black;
+          font-weight: 800;
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          font-size: 0.9rem;
+        }
       }
     }
+  }
+}
+
+[data-theme="dark"] {
+  .container-link__more {
+    color: variables.$text-color-dark;
   }
 }

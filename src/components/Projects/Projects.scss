@@ -28,6 +28,10 @@
       position: relative;
       cursor: pointer;
 
+      [data-theme="dark"] & {
+        background-color: rgba(white, 0.2);
+      }
+
       @media (max-width: 1024px) {
         height: 22rem;
         width: 100%;
@@ -127,6 +131,10 @@
             font-weight: 700;
             text-shadow: 1px 1px 0px black, -1px -1px 0px black,
               1px -1px 0px black, -1px 1px 0px black;
+
+            [data-theme="dark"] & {
+              color: variables.$color-touch-dark;
+            }
           }
         }
       }
@@ -147,13 +155,11 @@
           gap: 0.3rem;
           font-size: 0.9rem;
         }
+
+        [data-theme="dark"] & {
+          color: variables.$text-color-dark;
+        }
       }
     }
-  }
-}
-
-[data-theme="dark"] {
-  .container-link__more {
-    color: variables.$text-color-dark;
   }
 }

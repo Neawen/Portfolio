@@ -1,13 +1,18 @@
+@use "sass:color";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap");
 
-@use 'sass:color';
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Shadows+Into+Light&display=swap');
-
+// light theme
 $bg-light: #d1d7da;
 $text-color-light: black;
+$color-touch: #aa2041;
+
+// dark theme
 $bg-dark: black;
 $text-color-dark: $bg-light;
+$color-touch-dark: color.adjust($color-touch, $lightness: 15%);
 
 $font: "Quicksand", sans-serif;
 $logo-font: "Shadows into light", sans-serif;
 $title-font: "Shadows into light", sans-serif;
-$color-touch: #AA2041;
+
+

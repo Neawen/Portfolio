@@ -21,6 +21,10 @@
     width: 100%;
     margin-bottom: 1rem;
   }
+
+  [data-theme="dark"] & {
+    border-left: 2px solid $color-touch-dark;
+  }
 }
 
 @mixin content-text {

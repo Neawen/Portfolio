@@ -9,6 +9,10 @@
   overflow: hidden;
   font-family: variables.$font;
 
+  [data-theme="dark"] & {
+    border: variables.$color-touch-dark 1px solid;
+  }
+
   // for computer and accessibility
   &:hover,
   &:focus {
@@ -25,6 +29,10 @@
     background-color: variables.$color-touch;
     color: rgba(white, 0.4);
     transition: all 0.3s ease;
+
+    [data-theme="dark"] & {
+      background-color: variables.$color-touch-dark;
+    }
   }
 
   // for computer and accessibility

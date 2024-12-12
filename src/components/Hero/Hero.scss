@@ -40,6 +40,11 @@
     font-size: 5.5rem;
     font-family: variables.$title-font;
 
+    [data-theme="dark"] & {
+      text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black,
+        -1px 1px 0px black;
+    }
+
     @media (max-width: 1080px) {
       font-size: 3rem;
     }
@@ -68,25 +73,18 @@
         padding-bottom: 0.2rem;
         border-bottom: 0.8rem solid black;
 
+        [data-theme="dark"] & {
+          border-bottom: 0.8rem solid variables.$text-color-dark;
+
+          @media (max-width: 1024px) {
+            border-bottom: 0.5rem solid black;
+          }
+        }
+
         @media (max-width: 768px) {
           border-bottom: 0.5rem solid black;
         }
       }
     }
-  }
-}
-
-[data-theme="dark"] {
-  .hero__title {
-    text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black,
-      -1px 1px 0px black; /* Crée une bordure autour du texte */
-
-      & .border-bottom {
-        border-bottom: 0.8rem solid variables.$text-color-dark;
-
-        @media (max-width: 1024px) {
-          border-bottom: 0.5rem solid black;
-        }
-      }
   }
 }

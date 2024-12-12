@@ -1,39 +1,47 @@
 @use "../../assets/style/mixins/link.scss" as *;
+@use "../../assets/style/variables.scss" as variables;
 
 footer {
   width: 100%;
   display: flex;
   justify-content: center;
   box-shadow: 5px 5px 10px black;
-  
+
+  [data-theme="dark"] & {
+    box-shadow: 5px 5px 10px variables.$text-color-dark;
+  }
+
   .footer {
-  padding: 2rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  max-width: 1440px;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    padding: 2rem 1rem;
-    flex-direction: column-reverse;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
-
-  &__social {
-    font-size: 2.3rem;
-    @include link;
-    color: black;
-  }
-
-  &__title {
-    font-size: 1.1rem;
+    gap: 1rem;
+    max-width: 1440px;
+    width: 100%;
 
     @media (max-width: 768px) {
-      text-align: center;
+      padding: 2rem 1rem;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__social {
+      font-size: 2.3rem;
+      @include link;
+      color: black;
+
+      [data-theme="dark"] & {
+        color: variables.$text-color-dark;
+      }
+    }
+
+    &__title {
+      font-size: 1.1rem;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
     }
   }
-}
-
 }

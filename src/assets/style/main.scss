@@ -12,10 +12,8 @@ body {
   color: variables.$text-color-light;
   font-family: variables.$font;
   font-size: 1.1rem;
-}
 
-[data-theme="dark"] {
-  body {
+  [data-theme="dark"] & {
     background-color: variables.$bg-dark;
     color: variables.$text-color-dark;
   }
@@ -38,6 +36,10 @@ body {
   &__icon {
     font-size: 2.5rem;
     color: variables.$color-touch;
+
+    [data-theme="dark"] & {
+      color: variables.$color-touch-dark;
+    }
   }
 
   &__name {

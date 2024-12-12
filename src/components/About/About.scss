@@ -21,6 +21,10 @@
       a {
         color: black;
         text-decoration: underline;
+
+        [data-theme="dark"] & {
+          color: variables.$text-color-dark;
+        }
       }
     }
   }
@@ -38,6 +42,10 @@
       background: rgba(white, 0.4);
       padding: 2.5rem;
       border-radius: 1rem;
+
+      [data-theme="dark"] & {
+        background: rgba(white, 0.2);
+      }
 
       @media (max-width: 768px) {
         width: 100%;

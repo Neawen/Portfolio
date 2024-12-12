@@ -70,6 +70,7 @@
           padding: 0.1rem 1rem;
           margin-top: 1rem;
           background-color: variables.$bg-light;
+          color: variables.$text-color-light;
 
           [data-theme="dark"] & {
             background-color: variables.$bg-dark;

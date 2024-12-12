@@ -123,8 +123,16 @@
     cursor: pointer;
     margin: 0.2rem;
 
+    [data-theme="dark"] & {
+      border: solid 0.1rem variables.$text-color-dark;
+    }
+
     &.active {
       background-color: black;
+
+      [data-theme="dark"] & {
+        background-color: variables.$text-color-dark;
+      }
     }
   }
 }

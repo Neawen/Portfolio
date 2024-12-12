@@ -36,6 +36,7 @@
           font-family: variables.$font;
           cursor: pointer;
           border-bottom: variables.$text-color-light solid 1px;
+          color: variables.$text-color-light;
 
           [data-theme="dark"] & {
             background-color: variables.$bg-dark;
@@ -179,8 +180,12 @@
         justify-content: space-between;
 
         &__close {
-          background-color: variables.$bg-light;
-          border: none;
+          @include link;
+          & {
+            background-color: variables.$bg-light;
+            border: none;
+            color: variables.$text-color-light;
+          }
 
           [data-theme="dark"] & {
             background-color: color.adjust(variables.$bg-dark, $lightness: 20%);

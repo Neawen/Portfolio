@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { ProjectType, ProjectsTypeImage } from "../../PropTypes/types";
+import PropTypes from "prop-types";
+import ReactModal from "react-modal";
+import { useTranslation } from "react-i18next";
 
 import "./AllProjects.scss";
 
-import PropTypes from "prop-types";
-import ReactModal from "react-modal";
 // attach modal to root App
 ReactModal.setAppElement("#root");
 
 const AllProjects = ({ projectsData, projectsImage }) => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("all");
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -41,10 +43,10 @@ const AllProjects = ({ projectsData, projectsImage }) => {
   return (
     <main className="main">
       <section className="all-projects">
-        <h1 className="all-projects__title">Tous mes projets</h1>
+        <h1 className="all-projects__title">{t("allProjectsPage.title")}</h1>
         <div className="all-projects__container">
           <div className="filters">
-            <p>Catégories :</p>
+            <p>{t("allProjectsPage.filters.paragraph")}</p>
             <div>
               {categories.map((category) => (
                 <button
@@ -52,7 +54,9 @@ const AllProjects = ({ projectsData, projectsImage }) => {
                   onClick={() => setActiveCategory(category)}
                   className={category === activeCategory ? "active" : undefined}
                 >
-                  {category === "all" ? "Toutes" : category}
+                  {category === "all"
+                    ? t("allProjectsPage.filters.categories.all")
+                    : category}
                 </button>
               ))}
             </div>
@@ -69,8 +73,8 @@ const AllProjects = ({ projectsData, projectsImage }) => {
                     src={projectsImage[project.imageKey]}
                     alt={
                       project.title === "Portfolio"
-                        ? `${project.title} web site`
-                        : `Web site for ${project.title}`
+                        ? `${project.title}`
+                        : `${t("allProjectsPage.projects.images.Alt")} ${project.title}`
                     }
                   />
                   <div className="container-projects__card__infos">
@@ -99,12 +103,12 @@ const AllProjects = ({ projectsData, projectsImage }) => {
         {selectedProject && (
           <>
             <div className="modal__header">
-              <h2>Détails du projet</h2>
+              <h2>{t("allProjectsPage.modal.title")}</h2>
               <button className="modal__header__close">
                 <i
                   className="fa-regular fa-circle-xmark"
                   onClick={closeModal}
-                  aria-label="Fermer la modale"
+                  aria-label={t("allProjectsPage.modal.label")}
                 ></i>
               </button>
             </div>
@@ -117,9 +121,7 @@ const AllProjects = ({ projectsData, projectsImage }) => {
                     : selectedProject.repoLink
                 }
               >
-                {selectedProject.link
-                  ? "Voir le projet"
-                  : "Voir le code du projet"}
+                {t("projects.seeProject")}
               </a>
             </div>
           </>

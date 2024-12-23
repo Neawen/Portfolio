@@ -1,9 +1,12 @@
 import { useRef, useState } from "react";
-import "./Form.scss";
 import emailjs from "emailjs-com";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
+import "./Form.scss";
 
 const Form = () => {
+  const { t } = useTranslation();
   const [formStatus, setFormStatus] = useState("");
   // ref to interact with a dom element (form)
   const ref = useRef(null);
@@ -21,7 +24,7 @@ const Form = () => {
       !formData.get("email") ||
       !formData.get("message")
     ) {
-      setFormStatus("Merci de remplir tous les champs.");
+      setFormStatus(t("form.formStatus.field"));
       return;
     }
 
@@ -36,18 +39,18 @@ const Form = () => {
         import.meta.env.VITE_EMAILJS_KEY
       )
       .then(() => {
-        setFormStatus("Message envoyé avec succès !");
+        setFormStatus(t("form.formStatus.succeed"));
         e.target.reset();
       })
       .catch((error) => {
-        console.error(`Erreur lors de l'envoi de l'email`, error);
-        setFormStatus(`Erreur lors de l'envoi, veuillez réessayez.`);
+        console.error(`Erreur lors de l'envoi du message`, error);
+        setFormStatus(t("form.formStatus.error"));
       });
   }
 
   return (
     <section className="form-section" id="contact">
-      <h2 className="form-section__title">Contactez-moi</h2>
+      <h2 className="form-section__title">{t("form.title")}</h2>
       <motion.div className="form-section__container" 
       ref={ref}
       initial={{ opacity: 0}}
@@ -56,30 +59,30 @@ const Form = () => {
       viewport={{ once: true }}
       >
         <div className="text">
-          <p>Une idée de projet en tête ou pour toute autre information</p>
+          <p>{t("form.paragraph")}</p>
           <i className="fa-solid fa-turn-down"></i>
         </div>
         <form className="form" onSubmit={handleSubmit}>
           <div className="form__container-name">
             <label>
-              Nom
+            {t("form.name")}
               <input type="text" name="name" required />
             </label>
             <label>
-              Prénom
+            {t("form.firstname")}
               <input type="text" name="firstname" required />
             </label>
           </div>
           <label>
-            Email
+          {t("form.email")}
             <input type="email" name="email" required />
           </label>
           <label>
-            Message
+          {t("form.message")}
             <textarea name="message" required />
           </label>
           <div className="container-button">
-            <button type="submit">Envoyer</button>
+            <button type="submit">{t("form.submit")}</button>
           </div>
           <p className="status">{formStatus}</p>
         </form>

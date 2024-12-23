@@ -2,8 +2,6 @@
     {
         "id": 1,
         "title": "Sophie Bluel",
-        "description": "Dans ce projet, j'ai développé une interface web interactive pour une architecte d'intérieur, intégrant une présentation de ses réalisations, une page de connexion pour la gestion des contenus, et une modale d'upload de médias. Ce travail m'a permis de mettre en pratique mes compétences en JavaScript pour manipuler le DOM et gérer les interactions utilisateurs. En communiquant avec une API, j'ai également assuré la persistance des données. Les maquettes ont été fournies via Figma, et le projet a été géré dans Visual Studio Code et versionné avec GitHub, tout en suivant un Kanban pour l'organisation des tâches. Ce projet m'a offert une expérience complète de développement front-end dynamique avec une approche from scratch.",
-        "shortDesc": "Portfolio d'une architecte d'intérieur.",
         "skills": [
             "JavaScript",
             "API",
@@ -20,8 +18,6 @@
     {
         "id": 2,
         "title": "KASA",
-        "description": "Dans le cadre de la refonte complète du site Kasa, j'ai développé le front-end en React en suivant les maquettes Figma responsives. Le projet comprenait la création de composants interactifs, tels qu'une galerie de photos avec navigation circulaire et un système de collapse pour la gestion des informations supplémentaires. Le projet a été réalisé sans back-end actif, en utilisant un fichier JSON pour simuler les annonces de logements. Les styles ont été appliqués via SASS pour garantir un design responsive et uniforme.",
-        "shortDesc": "Application web de location immobilière.",
         "skills": [
             "React",
             "React Router",
@@ -38,8 +34,6 @@
     {
         "id": 3,
         "title": "ArgentBank",
-        "description": "Dans ce projet, j'ai travaillé sur le front-end d'une application bancaire dynamique, développée en React pour l'interface utilisateur et Redux pour la gestion de l'état. L'application permet aux utilisateurs d'accéder à un tableau de bord bancaire sécurisé et responsive, avec des fonctionnalités de connexion et déconnexion, en utilisant un document API existant pour la connexion. En vue de futures fonctionnalités de gestion des transactions, j'ai documenté les routes API nécessaires, suivant les directives de Swagger. Cette documentation couvre les endpoints de visualisation, de modification, et de suppression d'informations sur les transactions. J'ai également intégré des pratiques de Green Code pour optimiser les images et les composants, améliorant ainsi la performance et la durabilité de l'application.",
-        "shortDesc": "Front-end d'une application bancaire.",
         "skills": [
             "React",
             "React Router",
@@ -55,8 +49,6 @@
     {
         "id": 4,
         "title": "Portfolio",
-        "description": "Mon portfolio en ligne présente mes compétences en développement web à travers un site moderne et responsive. Il met en avant mes projets réalisés avec des technologies comme React, JavaScript et SASS, ainsi que des animations fluides pour une expérience utilisateur engageante. Le projet intègre l'API GitHub pour afficher mon dernier projet mis à jour en temps réel. En termes de performance, le site est optimisé pour un chargement rapide et une navigation fluide. Côté SEO et accessibilité, chaque page est soigneusement structurée pour garantir un bon référencement et une expérience inclusive. Le code est également régulièrement mis à jour et optimisé, avec un suivi constant des dépendances via Dependabot. Le site est déployé sur Vercel.",
-        "shortDesc": "Portfolio personnel.",
         "skills": [
             "React",
             "SASS",

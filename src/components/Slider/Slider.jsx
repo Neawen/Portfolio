@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import "./Slider.scss";
+
 import cv from "../../assets/pdf/cv.pdf";
+
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   // state variable to save repo from GitHub
   const [repos, setRepos] = useState([]);
+  const { t } = useTranslation();
 
   const slides = [
     {
@@ -15,13 +20,13 @@ const Slider = () => {
           <a
             href="https://github.com/Neawen"
             target="_blank"
-            aria-label="Lien vers GitHub"
+            aria-label={t("slider.firstView.label")}
           >
             <i className="fa-brands fa-github"></i>
           </a>
           <div className="slider__container__border"></div>
           <a className="slider__container__cv" href={cv} target="_blank">
-            CV <i className="fa-regular fa-file-pdf"></i>
+          CV <i className="fa-regular fa-file-pdf"></i>
           </a>
         </>
       ),
@@ -30,7 +35,7 @@ const Slider = () => {
       // second view
       content: (
         <>
-          <h2 className="title">Dernier projet GitHub</h2>
+          <h2 className="title">{t("slider.secondView.title")}</h2>
           <ul className="list">
             {repos.map((repo) => (
               <li key={repo.id}>
@@ -38,7 +43,7 @@ const Slider = () => {
                   {repo.name}
                 </a>
                 <p className="list__text">
-                  Maj : {new Date(repo.updated_at).toLocaleDateString()}
+                {t("slider.secondView.updated")} : {new Date(repo.updated_at).toLocaleDateString()}
                 </p>
               </li>
             ))}

@@ -7,11 +7,20 @@ import "./assets/style/main.scss";
 
 import { ParallaxProvider } from "react-scroll-parallax";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import projectsData from "./data/projects.json";
 import projectsImage from "./data/projectsImages";
 
 function App() {
+  const { t } = useTranslation();
+
+  const translatedProjects = projectsData.map((project) => ({
+    ...project,
+    shortDesc: t(`projects.projectsData.${project.id}.shortDesc`),
+    description: t(`projects.projectsData.${project.id}.description`)
+  }))
+
   return (
     <ParallaxProvider>
       <Router>
@@ -21,7 +30,7 @@ function App() {
             path="/"
             element={
               <Landing
-                projectsData={projectsData}
+                projectsData={translatedProjects}
                 projectsImage={projectsImage}
               />
             }
@@ -30,7 +39,7 @@ function App() {
             path="/all-projects"
             element={
               <AllProjects
-                projectsData={projectsData}
+                projectsData={translatedProjects}
                 projectsImage={projectsImage}
               />
             }

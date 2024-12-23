@@ -1,0 +1,95 @@
+{
+  "header": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "home": "Home",
+    "burgerMenu": "Options menu",
+    "toggleTheme": "Switch to {{mode}} mode",
+    "dark": "dark",
+    "light": "light"
+  },
+  "hero": {
+    "imageDesc": "Abstract image referring to web development languages",
+    "work": "Web Developer",
+    "workType": "ntend"
+  },
+  "slider": {
+    "firstView": {
+      "label": "Link to GitHub"
+    },
+    "secondView": {
+      "title": "Latest GitHub project",
+      "updated": "Updated"
+    }
+  },
+  "about": {
+    "sectionTitle": "About me",
+    "content": [
+      {
+        "paragraph": "Passionate about the web, I started learning the basics of HTML and <a href='https://css-tricks.com/' target='_blank' rel='noopener noreferrer'>CSS</a> on my own before joining the web developer integrator training at OpenClassrooms. There, I strengthened my skills and learned new technologies like <a href='https://www.javascript.com/' target='_blank' rel='noopener noreferrer'>JavaScript</a>, <a href='https://react.dev/' target='_blank' rel='noopener noreferrer'>React</a>, and <a href='https://redux.js.org/' target='_blank' rel='noopener noreferrer'>Redux</a>. <a href='https://www.w3.org/WAI/' target='_blank' rel='noopener noreferrer'>Accessibility</a> and <a href='https://owasp.org/' target='_blank' rel='noopener noreferrer'>security</a> are essential to me in designing websites and web applications that offer an inclusive and reliable user experience."
+      },
+      {
+        "paragraph": "Always staying up to date with <a href='https://feedly.com/' target='_blank' rel='noopener noreferrer'>trends</a>, I continue exploring technologies and refining my methods. My goal is to develop modern, high-performance solutions tailored to the web, respecting responsive design principles for smooth navigation on mobile, tablet, or desktop. Your satisfaction is my priority, and I am committed to meeting the expectations of each project with innovation and precision."
+      }
+    ],
+    "skillsTitle": "Skills and tools"
+  },
+  "projects": {
+    "title": "Projects",
+    "seeProject": "See the project",
+    "more": "More",
+    "projectsData": {
+      "1": {
+        "shortDesc": "Interior architect's portfolio.",
+        "description": "In this project, I developed an interactive web interface for an interior architect, integrating a presentation of her work, a login page for content management, and a media upload modal. This work allowed me to apply my JavaScript skills to manipulate the DOM and manage user interactions. By communicating with an API, I ensured data persistence. The designs were provided via Figma, and the project was managed in Visual Studio Code and versioned with GitHub, following a Kanban board for task organization. This project gave me comprehensive experience in dynamic front-end development with a from-scratch approach."
+      },
+      "2": {
+        "shortDesc": "Real estate rental web application.",
+        "description": "As part of the complete redesign of the Kasa site, I developed the front-end in React, following responsive Figma designs. The project included creating interactive components, such as a photo gallery with circular navigation and a collapse system for managing additional information. The project was carried out without an active back-end, using a JSON file to simulate housing listings. Styles were applied via SASS to ensure a responsive and uniform design."
+      },
+      "3": {
+        "shortDesc": "Front-end of a banking application.",
+        "description": "In this project, I worked on the front-end of a dynamic banking application, developed with React for the user interface and Redux for state management. The application allows users to access a secure and responsive banking dashboard, with login and logout features, using an existing API document for authentication. In preparation for future transaction management features, I documented the necessary API routes following Swagger guidelines. I also integrated Green Code practices to optimize images and components, improving the application's performance and sustainability."
+      },
+      "4": {
+        "shortDesc": "Personal portfolio.",
+        "description": "My online portfolio showcases my web development skills through a modern and responsive site. It highlights my projects built with technologies like React, JavaScript, and SASS, as well as smooth animations for an engaging user experience. The project integrates the GitHub API to display my latest updated project in real time. In terms of performance, the site is optimized for fast loading and smooth navigation. On the SEO and accessibility side, each page is carefully structured to ensure good ranking and an inclusive experience."
+      }
+    }
+  },
+  "form": {
+    "title": "Contact Me",
+    "paragraph": "Have a project idea in mind or need more information",
+    "name": "Name",
+    "firstname": "First Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send",
+    "formStatus": {
+      "field": "Please fill in all fields.",
+      "succeed": "Message sent successfully!",
+      "error": "Error while sending, please try again."
+    }
+  },
+  "footer": {
+    "title": "All rights reserved.",
+    "label": "Link to LinkedIn"
+  },
+  "allProjectsPage": {
+    "title": "All my projects",
+    "filters": {
+      "paragraph": "Categories:",
+      "categories": {
+        "all": "All"
+      }
+    },
+    "projects": {
+      "imagesAlt": "Website for"
+    },
+    "modal": {
+      "title": "Project details",
+      "label": "Close modal"
+    }
+  }
+}

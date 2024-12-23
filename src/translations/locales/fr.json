@@ -1,0 +1,95 @@
+{
+  "header": {
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact",
+    "home": "Accueil",
+    "burgerMenu": "Menu d'options",
+    "toggleTheme": "Activer le mode {{mode}}",
+    "dark": "sombre",
+    "light": "clair"
+  },
+  "hero": {
+    "imageDesc": "Image abstraite faisant référence à des langages de développement web",
+    "work": "Développeuse web",
+    "workType": "nt-end"
+  },
+  "about": {
+    "sectionTitle": "À propos de moi",
+    "content": [
+      {
+        "paragraph": "Passionnée par le web, j'ai commencé à apprendre les bases des langages HTML et <a href='https://css-tricks.com/' target='_blank' rel='noopener noreferrer'>CSS</a> par moi-même avant de rejoindre la formation de développeur intégrateur web chez OpenClassrooms. J'y ai renforcé mes compétences et appris de nouvelles technologies comme <a href='https://www.javascript.com/' target='_blank' rel='noopener noreferrer'>JavaScript</a>, <a href='https://react.dev/' target='_blank' rel='noopener noreferrer'>React</a> et <a href='https://redux.js.org/' target='_blank' rel='noopener noreferrer'>Redux</a>. L'<a href='https://www.w3.org/WAI/' target='_blank' rel='noopener noreferrer'>accessibilité</a> et la <a href='https://owasp.org/' target='_blank' rel='noopener noreferrer'>sécurité</a> sont pour moi essentielles pour concevoir des sites internet et applications web offrant une expérience utilisateur inclusive et fiable."
+      },
+      {
+        "paragraph": "Toujours en <a href='https://feedly.com/' target='_blank' rel='noopener noreferrer'>veille</a>, je continue d'explorer les technologies et de perfectionner mes méthodes. Mon objectif est de développer des solutions modernes, performantes et adaptées au web, en respectant les principes de responsive design, pour une navigation fluide sur mobile, tablette ou ordinateur. Votre satisfaction est ma priorité, et je m'engage à répondre aux attentes de chaque projet avec innovation et rigueur."
+      }
+    ],
+    "skillsTitle": "Compétences et Outils"
+  },
+  "slider": {
+    "firstView": {
+      "label": "Lien vers GitHub"
+    },
+    "secondView": {
+      "title": "Dernier projet GitHub",
+      "updated": "Maj"
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "seeProject": "Voir le projet",
+    "more": "Plus",
+    "projectsData": {
+      "1": {
+        "shortDesc": "Portfolio d'une architecte d'intérieur.",
+        "description": "Dans ce projet, j'ai développé une interface web interactive pour une architecte d'intérieur, intégrant une présentation de ses réalisations, une page de connexion pour la gestion des contenus, et une modale d'upload de médias. Ce travail m'a permis de mettre en pratique mes compétences en JavaScript pour manipuler le DOM et gérer les interactions utilisateurs. En communiquant avec une API, j'ai également assuré la persistance des données. Les maquettes ont été fournies via Figma, et le projet a été géré dans Visual Studio Code et versionné avec GitHub, tout en suivant un Kanban pour l'organisation des tâches. Ce projet m'a offert une expérience complète de développement front-end dynamique avec une approche from scratch."
+      },
+      "2": {
+        "shortDesc": "Application web de location immobilière.",
+        "description": "Dans le cadre de la refonte complète du site Kasa, j'ai développé le front-end en React en suivant les maquettes Figma responsives. Le projet comprenait la création de composants interactifs, tels qu'une galerie de photos avec navigation circulaire et un système de collapse pour la gestion des informations supplémentaires. Le projet a été réalisé sans back-end actif, en utilisant un fichier JSON pour simuler les annonces de logements. Les styles ont été appliqués via SASS pour garantir un design responsive et uniforme."
+      },
+      "3": {
+        "shortDesc": "Front-end d'une application bancaire.",
+        "description": "Dans ce projet, j'ai travaillé sur le front-end d'une application bancaire dynamique, développée en React pour l'interface utilisateur et Redux pour la gestion de l'état. L'application permet aux utilisateurs d'accéder à un tableau de bord bancaire sécurisé et responsive, avec des fonctionnalités de connexion et déconnexion, en utilisant un document API existant pour la connexion. En vue de futures fonctionnalités de gestion des transactions, j'ai documenté les routes API nécessaires, suivant les directives de Swagger. J'ai également intégré des pratiques de Green Code pour optimiser les images et les composants, améliorant ainsi la performance et la durabilité de l'application."
+      },
+      "4": {
+        "shortDesc": "Portfolio personnel.",
+        "description": "Mon portfolio en ligne présente mes compétences en développement web à travers un site moderne et responsive. Il met en avant mes projets réalisés avec des technologies comme React, JavaScript et SASS, ainsi que des animations fluides pour une expérience utilisateur engageante. Le projet intègre l'API GitHub pour afficher mon dernier projet mis à jour en temps réel. En termes de performance, le site est optimisé pour un chargement rapide et une navigation fluide. Côté SEO et accessibilité, chaque page est soigneusement structurée pour garantir un bon référencement et une expérience inclusive."
+      }
+    }
+  },
+  "form": {
+    "title": "Contactez-moi",
+    "paragraph": "Une idée de projet en tête ou pour toute autre information",
+    "name": "Nom",
+    "firstname": "Prénom",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Envoyer",
+    "formStatus": {
+      "field": "Merci de remplir tous les champs.",
+      "succeed": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi, veuillez réessayez."
+    }
+  },
+  "footer": {
+    "title": "Tous droits réservés.",
+    "label": "Lien vers Linkedin"
+  },
+  "allProjectsPage": {
+    "title": "Tous mes projets",
+    "filters": {
+      "paragraph": "Catégories :",
+      "categories": {
+        "all": "Toutes"
+      }
+    },
+    "projects": {
+      "imagesAlt": "Site web pour"
+    },
+    "modal": {
+      "title": "Détails du projet",
+      "label": "Fermer la modale"
+    }
+  }
+}

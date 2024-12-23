@@ -6,8 +6,10 @@ import PropTypes from "prop-types";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Projects = ({ projectsData, projectsImage }) => {
+  const { t } = useTranslation();
   const [projectInfos, setProjectInfos] = useState([]);
   // ref to interact with a dom element (pojects container)
   const ref = useRef(null);
@@ -53,7 +55,7 @@ const Projects = ({ projectsData, projectsImage }) => {
   return (
     <section id="projects-section">
       <div className="projects">
-        <h2 className="projects__title">Projets</h2>
+        <h2 className="projects__title">{t("projects.title")}</h2>
         <motion.div
           className="projects__content"
           variants={containerVariants}
@@ -91,7 +93,7 @@ const Projects = ({ projectsData, projectsImage }) => {
                   className="infos__link"
                   target="_blank"
                 >
-                  Voir le Projet
+                  {t("projects.seeProject")}
                 </a>
                 <ul className="infos__skills">
                   {project.skills.map((technology, index) => (
@@ -104,7 +106,7 @@ const Projects = ({ projectsData, projectsImage }) => {
 
           <div className="container-link">
             <Link to="/all-projects" className="container-link__more">
-              Plus <i className="fa-solid fa-angles-right"></i>
+              {t("projects.more")} <i className="fa-solid fa-angles-right"></i>
             </Link>
           </div>
         </motion.div>

@@ -1,12 +1,21 @@
 import { useEffect, useState } from "react";
-import "./Header.scss";
 import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "../../Hooks/useLanguage";
+import { useTranslation } from "react-i18next";
+
+import "./Header.scss";
+
+import iconFR from "../../assets/icons/france.svg";
+import iconUK from "../../assets/icons/united-kingdom.svg";
+
 
 const Header = () => {
+  const { t } = useTranslation();
+  const { lang, toggleLanguage } = useLanguage();
   const [activeSidebar, setActiveSideBar] = useState(false);
   const location = useLocation();
   const projectsPage = location.pathname === "/all-projects";
-
+  
   const [theme, setTheme] = useState(() => {
     const choosenTheme = localStorage.getItem("choosenTheme");
     const systemPreferences = window.matchMedia(
@@ -32,7 +41,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    // add data-theme attribute to the page 
+    // add data-theme attribute to the page
     document.documentElement.setAttribute("data-theme", theme);
     // update when theme changes
   }, [theme]);
@@ -50,18 +59,18 @@ const Header = () => {
           <nav className="header__nav">
             {!projectsPage ? (
               <>
-                <a href="/#about-section">À propos</a>
-                <a href="/#projects-section">Projets</a>
-                <a href="/#contact">Contact</a>
+                <a href="/#about-section">{t("header.about")}</a>
+                <a href="/#projects-section">{t("header.projects")}</a>
+                <a href="/#contact">{t("header.contact")}</a>
               </>
             ) : (
-              <Link to="/">Accueil</Link>
+              <Link to="/">{t("header.home")}</Link>
             )}
           </nav>
           <button
             className="header__burger"
             onClick={toggleSidebar}
-            aria-label="Ouvrir le menu d'options"
+            aria-label={t("header.burgerMenu")}
           >
             {activeSidebar ? (
               // back
@@ -76,21 +85,26 @@ const Header = () => {
           <nav className="sidebar__nav">
             {!projectsPage ? (
               <>
-                <a href="/#about-section">À propos</a>
-                <a href="/#projects-section">Projets</a>
-                <a href="/#contact">Contact</a>
+                <a href="/#about-section">{t("header.about")}</a>
+                <a href="/#projects-section">{t("header.projects")}</a>
+                <a href="/#contact">{t("header.contact")}</a>
               </>
             ) : (
-              <Link to="/">Accueil</Link>
+              <Link to="/">{t("header.home")}</Link>
             )}
           </nav>
           <div className="sidebar__config">
-            <p>Langage</p>
+            <button onClick={toggleLanguage}>
+              {lang === "fr" ? 
+              <img src={iconUK} alt="English language"></img>
+              : 
+              <img src={iconFR} alt="Langage français"></img>}
+            </button>
             <button
               onClick={toggleTheme}
-              aria-label={`Activer le mode ${
-                theme === "light" ? "sombre" : "clair"
-              }`}
+              aria-label={t("header.toggleTheme", {
+                mode: theme === "light" ? t("header.dark") : t("header.light"),
+              })}
             >
               {theme === "light" ? (
                 <i className="fa-regular fa-moon"></i>

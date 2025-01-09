@@ -8,7 +8,7 @@ const Footer = () => {
     <footer>
       <div className="footer">
         <h2 className="footer__title">
-          &copy; 2024 Lenoble Anaïs. {t("footer.title")}
+          &copy; 2025 Lenoble Anaïs. {t("footer.title")}
         </h2>
         <a
           href="http://www.linkedin.com/in/anais-lenoble"

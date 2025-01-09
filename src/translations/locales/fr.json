@@ -54,7 +54,7 @@
       },
       "4": {
         "shortDesc": "Portfolio personnel.",
-        "description": "Mon portfolio en ligne présente mes compétences en développement web à travers un site moderne et responsive. Il met en avant mes projets réalisés avec des technologies comme React, JavaScript et SASS, ainsi que des animations fluides pour une expérience utilisateur engageante. Le projet intègre l'API GitHub pour afficher mon dernier projet mis à jour en temps réel. En termes de performance, le site est optimisé pour un chargement rapide et une navigation fluide. Côté SEO et accessibilité, chaque page est soigneusement structurée pour garantir un bon référencement et une expérience inclusive."
+        "description": "Mon portfolio en ligne reflète mes compétences en développement web à travers un site moderne, responsive et optimisé. Il met en avant mes projets réalisés avec React, JavaScript et SASS, intégrant des animations fluides pour une expérience utilisateur engageante. Parmi ses fonctionnalités, une page dédiée présente tous mes projets avec des modales interactives pour des détails approfondis, un mode sombre et une version anglaise grâce à react-i18next. Le site est conçu pour une performance optimale avec un chargement rapide, un référencement soigné et une navigation fluide, tout en respectant les normes d'accessibilité."
       }
     }
   },

@@ -54,7 +54,7 @@
       },
       "4": {
         "shortDesc": "Personal portfolio.",
-        "description": "My online portfolio showcases my web development skills through a modern and responsive site. It highlights my projects built with technologies like React, JavaScript, and SASS, as well as smooth animations for an engaging user experience. The project integrates the GitHub API to display my latest updated project in real time. In terms of performance, the site is optimized for fast loading and smooth navigation. On the SEO and accessibility side, each page is carefully structured to ensure good ranking and an inclusive experience."
+        "description": "My online portfolio reflects my web development skills through a modern, responsive, and optimized website. It showcases projects built with React, JavaScript, and SASS, incorporating smooth animations for an engaging user experience. Among its features, a dedicated page displays all my projects with interactive modals for in-depth details, a dark mode, and an English version thanks to react-i18next. The site is designed for optimal performance with fast loading times, careful SEO, smooth navigation, and adherence to accessibility standards."
       }
     }
   },

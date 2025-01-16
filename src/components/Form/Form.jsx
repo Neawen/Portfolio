@@ -53,8 +53,14 @@ const Form = () => {
       <h2 className="form-section__title">{t("form.title")}</h2>
       <motion.div className="form-section__container" 
       ref={ref}
-      initial={{ opacity: 0}}
-      animate={isInView && { opacity: 1 }}
+      initial={{ 
+        opacity: 0,
+        scale: 0.8
+      }}
+      animate={isInView && { 
+        opacity: 1,
+        scale: 1
+      }}
       transition={{ duration: 0.5, delay: 0.5}}
       viewport={{ once: true }}
       >

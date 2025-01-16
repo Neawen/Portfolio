@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 const Projects = ({ projectsData, projectsImage }) => {
   const { t } = useTranslation();
   const [projectInfos, setProjectInfos] = useState([]);
-  // ref to interact with a dom element (pojects container)
+  // ref to interact with a dom element (projects container)
   const ref = useRef(null);
   // framer motion hook to check if ref is visible at 50%
   const isInView = useInView(ref, { threshold: 0.5 });
@@ -35,8 +35,14 @@ const Projects = ({ projectsData, projectsImage }) => {
 
   // animation variants for project cards
   const cardVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    hidden: { 
+      opacity: 0,
+      scale: 0.8
+     },
+    visible: { 
+      opacity: 1,
+      scale: 1
+    },
   };
 
   // animation variants for parent container
@@ -46,6 +52,8 @@ const Projects = ({ projectsData, projectsImage }) => {
       opacity: 1,
       transition: {
         delay: 0.5,
+        duration: 0.5,
+        ease: "easeInOut",
         // delay between children
         staggerChildren: 1,
       },

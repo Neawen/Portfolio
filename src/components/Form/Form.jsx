@@ -51,18 +51,21 @@ const Form = () => {
   return (
     <section className="form-section" id="contact">
       <h2 className="form-section__title">{t("form.title")}</h2>
-      <motion.div className="form-section__container" 
-      ref={ref}
-      initial={{ 
-        opacity: 0,
-        scale: 0.8
-      }}
-      animate={isInView && { 
-        opacity: 1,
-        scale: 1
-      }}
-      transition={{ duration: 0.5, delay: 0.5}}
-      viewport={{ once: true }}
+      <motion.div
+        className="form-section__container"
+        ref={ref}
+        initial={{
+          opacity: 0,
+          scale: 0.8,
+        }}
+        animate={
+          isInView && {
+            opacity: 1,
+            scale: 1,
+          }
+        }
+        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+        viewport={{ once: true }}
       >
         <div className="text">
           <p>{t("form.paragraph")}</p>
@@ -71,20 +74,20 @@ const Form = () => {
         <form className="form" onSubmit={handleSubmit}>
           <div className="form__container-name">
             <label>
-            {t("form.name")}
+              {t("form.name")}
               <input type="text" name="name" required />
             </label>
             <label>
-            {t("form.firstname")}
+              {t("form.firstname")}
               <input type="text" name="firstname" required />
             </label>
           </div>
           <label>
-          {t("form.email")}
+            {t("form.email")}
             <input type="email" name="email" required />
           </label>
           <label>
-          {t("form.message")}
+            {t("form.message")}
             <textarea name="message" required />
           </label>
           <div className="container-button">

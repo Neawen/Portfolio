@@ -35,21 +35,22 @@ const Projects = ({ projectsData, projectsImage }) => {
 
   // animation variants for project cards
   const cardVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
-      scale: 0.8
-     },
-    visible: { 
+      scale: 0.8,
+    },
+    visible: {
       opacity: 1,
-      scale: 1
+      scale: 1,
     },
   };
 
   // animation variants for parent container
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.8 },
     visible: {
       opacity: 1,
+      scale: 1,
       transition: {
         delay: 0.5,
         duration: 0.5,

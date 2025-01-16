@@ -8,6 +8,10 @@
   flex-direction: column;
   gap: 2rem;
 
+  @media (max-width: 768px) {
+    margin: 1rem 0 3rem 0;
+  }
+
   &__presentation {
     @include content;
 
